@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Model } from './QUARTZ';
 import { Canvas, useThree } from '@react-three/fiber';
-import { ContactShadows, OrbitControls } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three'
 
 function Controls() {
@@ -13,14 +13,7 @@ function Controls() {
 }
 
 const ProductModel = () => {
-    const [rotationY, setRotationY] = useState(0);
    
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setRotationY(rotationY => rotationY + Math.PI / 180);
-        }, 50);
-        return () => clearInterval(interval);
-    }, []);
 
     return (
         <>
