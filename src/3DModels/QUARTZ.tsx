@@ -11,7 +11,6 @@ import { useSelector } from 'react-redux'
 import { RootState } from '../store/store';
 import { useFrame, useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-
 type GLTFResult = GLTF & {
   nodes: {
     SOLE_02: THREE.Mesh
@@ -49,7 +48,7 @@ export function Model(props: JSX.IntrinsicElements['group']) {
 
   const selectedColor = useSelector((state: RootState) => state.app.selectedColor);
 
-  const gltf = useLoader(GLTFLoader, '/Model/QUARTZ.glb');
+  const gltf = useLoader(GLTFLoader, 'https://EyeOnServices.github.io/ShoeStore/Model/QUARTZ.glb');
 
   console.log(selectedColor);
   const center = new THREE.Vector3();
@@ -66,7 +65,7 @@ export function Model(props: JSX.IntrinsicElements['group']) {
     }
   });
 
-  const { nodes, materials } = useGLTF('/Model/QUARTZ.glb') as GLTFResult
+  const { nodes, materials } = useGLTF('https://EyeOnServices.github.io/ShoeStore/Model/QUARTZ.glb') as GLTFResult
 
   return (
     <group ref={groupRef} {...props} dispose={null} scale={38} position={[-1, -4, -2]} >
@@ -118,4 +117,4 @@ export function Model(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/Model/QUARTZ.glb')
+useGLTF.preload('https://EyeOnServices.github.io/ShoeStore/Model/QUARTZ.glb')
