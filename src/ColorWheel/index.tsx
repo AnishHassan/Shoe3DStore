@@ -96,7 +96,12 @@ const ColorWheel = () => {
     const ColorDiv = ({ color, onSelect, onToggleLock, index }: ColorDivProps) => (
 
         <ColorContainer
-            onClick={!color.locked ? (e) => { e.stopPropagation(); onSelect(color.id); } : undefined}
+            onClick={(e) => {
+                if (!color.locked && e.target !== e.currentTarget.querySelector('svg')) {
+                    e.stopPropagation();
+                    onSelect(color.id);
+                }
+            }}
             hex={color.hex}
             locked={color.locked}
             angle={angle + angleBetweenContainers * index}
@@ -143,9 +148,11 @@ const WheelContainer = styled.div`
   justify-content: center;
   position: relative;
   overflow: visible;
-  user-select: none; /* prevent text selection while dragging */
-  
+  user-select: none;
+  animation: rotate-wheel 0.5s ease-in-out;
+  animation-fill-mode: forwards;
 `;
+
 
 const ColorContainer = styled.div<{ hex: string; locked: boolean; angle: number }>`
   background-color: ${props => props.hex};

@@ -18,7 +18,7 @@ const ProductModel = () => {
     return (
         <>
             <Canvas
-                style={{ width: '60vw', height: '700px' }}
+                style={{ width: '60vw', height: '733px' }}
             >
                 <ambientLight />
                 <pointLight position={[2, 2, 1]} />

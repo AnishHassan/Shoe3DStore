@@ -236,7 +236,7 @@ const AudioContainer = styled.div`
 position : absolute;
 bottom : 40px;
 left : 10px;
-width : 22rem;
+width : 28rem;
 $rhap_theme-color: #fff !important; 
 
 .rhap_container{
