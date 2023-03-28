@@ -6,9 +6,13 @@ interface BackgroundControllerProps {
   children: ReactNode;
 }
 
+const ParentContainer = styled.div`
+  min-height: 100vh;
+`;
+
 const BackgroundContainer = styled.div<{ selectedColorhex: string, selectedColorsec: string }>`
   background-color: ${(props) => props.selectedColorhex};
-  position: absolute;
+  position: fixed;
   width : 100vw;
   height : 100vh;
   top: 0;
@@ -16,37 +20,39 @@ const BackgroundContainer = styled.div<{ selectedColorhex: string, selectedColor
   bottom: 0;
   right: 0;
   z-index: -1;
+  overflow: hidden;
 `;
 
 const RectangleOne = styled.div<{ selectedColorhex: string, selectedColorsec: string }>`
-  position: absolute;
-  left: 0;
+ position: fixed;
+   left: 0;
   top: 0;
-  width: 580px;
-  height: 450px;
+  width: 36.25rem;
+height: 28.125rem;
   background: linear-gradient(to top left, ${props => props.selectedColorhex}, ${props => props.selectedColorsec});
   border-radius: 0 0 580px 0;
 `;
 
 const RectangleTwo = styled.div<{ selectedColorhex: string, selectedColorsec: string }>`
-  position: absolute;
+ position: fixed;
   right: 0;
   top: 0;
-  width: 580px;
-  height: 450px;
+ width: 36.25rem;
+height: 28.125rem;
   background: linear-gradient(to top right, ${props => props.selectedColorhex}, ${props => props.selectedColorsec});
   border-radius: 0 0 0 580px;
 `;
 
 const RectangleThree = styled.div<{ selectedColorhex: string, selectedColorsec: string }>`
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  width: 630px;
-  height: 400px;
-  background: linear-gradient(to top right, ${props => props.selectedColorhex}, ${props => props.selectedColorsec});
-  border-radius: 630px 630px 0 0;
   left: 50%;
   transform: translateX(-50%);
+  width: 39.375rem;
+height: 25rem;
+
+  background: linear-gradient(to top right, ${props => props.selectedColorhex}, ${props => props.selectedColorsec});
+  border-radius: 630px 630px 0 0;
   margin: 0 auto;
 `;
 
@@ -58,6 +64,7 @@ const BackgroundController = ({ children }: BackgroundControllerProps) => {
   console.log(selectedColor);
   return (
     <>
+      
       <BackgroundContainer selectedColorhex={selectedColor.hex} selectedColorsec={selectedColor.sec} />
       <RectangleOne selectedColorhex={selectedColor.hex} selectedColorsec={selectedColor.sec} ></RectangleOne>
       <RectangleTwo selectedColorhex={selectedColor.hex} selectedColorsec={selectedColor.sec} ></RectangleTwo>

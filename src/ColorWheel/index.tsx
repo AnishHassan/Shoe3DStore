@@ -22,10 +22,44 @@ const ColorWheel = () => {
     const dispatch = useDispatch();
     const [angle, setAngle] = useState(0); // add angle state
     const [angles, setAngles] = useState<number[]>([]);
+    const [radius, setRadius] = useState<number>(400);
+    const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 
     const angleBetweenContainers = 360 / Colors.length;
-    const radius = 400; // radius of the circle
     const initialAngle = -90; // initial angle for the first container
+
+    useEffect(() => {
+        const handleResize = () => {
+            setViewportWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (viewportWidth > 1440) {
+            setRadius(400);
+        } else if (viewportWidth > 1300) {
+            setRadius(370);
+        } else if (viewportWidth > 1100) {
+            setRadius(360);
+        } else if (viewportWidth > 900) {
+            setRadius(310);
+        } else if (viewportWidth > 800) {
+            setRadius(290);
+        } else if (viewportWidth > 650) {
+            setRadius(260);
+        } else if (viewportWidth > 560) {
+            setRadius(230);
+        } else if (viewportWidth > 450) {
+            setRadius(200);
+        }
+    }, [viewportWidth]);
+
 
     useEffect(() => {
         const newAngles = Colors.map((_, index) => angle + angleBetweenContainers * index);
@@ -48,9 +82,9 @@ const ColorWheel = () => {
         if (selectedColor && !selectedColors.includes(selectedColor)) {
             setSelectedColors([...selectedColors, selectedColor]);
             const index = Colors.findIndex((color) => color.id === id);
-            const colorAngle = angle + angleBetweenContainers * index;
+            // const colorAngle = angle + angleBetweenContainers * index;
             dispatch(setSelectedColor(selectedColor));
-            updateAngle(initialAngle - colorAngle);
+            // updateAngle(initialAngle - colorAngle);
         }
     };
 
@@ -122,7 +156,7 @@ const ColorWheel = () => {
 
     return (
         <>
-            <WheelContainer id="wheel-container" onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} >
+            <WheelContainer id="wheel-container" >
                 {Colors.map((color, index) => (
                     <ColorDiv key={color.id} color={color} onSelect={selectColor} onToggleLock={toggleLock} index={index} />
                 ))}
@@ -151,6 +185,7 @@ const WheelContainer = styled.div`
   user-select: none;
   animation: rotate-wheel 0.5s ease-in-out;
   animation-fill-mode: forwards;
+  margin-top : -300px;
 `;
 
 
@@ -158,16 +193,21 @@ const ColorContainer = styled.div<{ hex: string; locked: boolean; angle: number 
   background-color: ${props => props.hex};
   width: 60px;
   height: 90px;
+  border-radius :16px;
   border : 2px solid #fff; 
   cursor: ${props => props.locked ? 'default' : 'pointer'};
   display: flex;
   justify-content: center;
-  border-radius: 50px 50px 0 0 / 10px 10px 0 0; /* top-left, top-right, bottom-left, bottom-right */
   align-items: center;
   color: white;
   position: absolute;
   top: 50%;
   left: 50%;
   transform-origin: 0 100%;
+  @media (max-width: 1629px) {
+  width: 50px;
+  height: 80px;
+
+  }
 `;
 

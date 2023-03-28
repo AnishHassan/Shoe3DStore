@@ -44,6 +44,11 @@ const AvatarContainer = styled.div`
   overflow: hidden;
   cursor: pointer;
   margin-top : 30px;
+   @media (max-width: 1440px) {
+  width: 60px;
+  height: 60px;
+margin-top : 25px;
+  }
 `;
 
 const AvatarOverlay = styled.div`

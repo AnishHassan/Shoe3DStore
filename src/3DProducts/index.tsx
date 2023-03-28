@@ -25,6 +25,11 @@ const ProductButton = styled.img<{ isActive: boolean }>`
   opacity: ${(props) => (props.isActive ? 0.9 : 0.4)};
   transition: opacity 0.3s ease-in;
   cursor : pointer;
+  @media (max-width: 1440px) {
+  width: 95px;
+  height: 95px;
+
+  }
 `;
 
 const ProductPrice = styled.h4<{ isActive: boolean }>`
@@ -35,17 +40,13 @@ const ProductPrice = styled.h4<{ isActive: boolean }>`
   font-weight: bold;
   margin-top : 4px;
   color : #fff;
+   @media (max-width: 1440px) {
+  font-size: 14px;
+  }
 `;
 
 
-// Define the styled component for the 3D view container
-const ThreeContainer = styled.div`
-  width: 100%;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+
 
 const ProductView: React.FC<Props> = ({ products }) => {
 
@@ -55,12 +56,7 @@ const ProductView: React.FC<Props> = ({ products }) => {
         setSelectedProduct1(product);
         dispatch(setSelectedProduct(product));
     };
-    // // Initialize the scene and camera on mount
-    // useEffect(() => {
-    //     if (products.length > 0) {
-    //         dispatch(setSelectedProduct(products[0]));
-    //     }
-    // }, [dispatch, products]);
+
 
     return (
         <>

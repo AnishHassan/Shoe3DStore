@@ -1,25 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import BackgroundController from './BackgroundController';
-import ColorWheel from './ColorWheel';
 import shoe1 from './Product_Buttons/APATITE.png'
 import shoe2 from './Product_Buttons/CALCITE.png'
 import shoe3 from './Product_Buttons/COPPER.png'
 import shoe4 from './Product_Buttons/CALCITE.png'
-import ProductView, { Product } from './3DProducts';
-import ProductModel from './3DModels';
-import USerModule from './UserModule/index';
+import { Product } from './3DProducts';
 import user from './assets/user.png'
-import ProductDesc from './PrductsDesc';
 import styled, { keyframes } from 'styled-components';
 import { useSelector } from 'react-redux';
 import { RootState } from './store/store';
 import Sizes from './ShoeSizes';
-import MusicPlayer from './MusicPlayer';
-import Player from './AudioPlayer';
-import ColorWheel2 from './ColorWheel/DemoWheel';
-import ColourWheelCustom from './ColorWheel3';
 import Loader from './loader';
-// import ColorWheel2 from './ColorWheel/DemoWheel';
+import { lazy } from 'react';
 
 
 const jump = keyframes`
@@ -34,14 +25,7 @@ const jump = keyframes`
   }
 `;
 
-const ActionContainer = styled.div`
-bottom : 40px;
-right : 60px;
-position :absolute;
-display : flex;
-flex-direction: column;
-align-items : center;
-`
+
 
 const Button = styled.button<{ color: String }>`
 font-size: 1rem;
@@ -94,6 +78,16 @@ margin-top : 5px;
   }
 
 `
+
+/*lazy loading*/
+const BackgroundController = lazy(() => import('./BackgroundController/index'));
+const ProductView = lazy(() => import('./3DProducts/index'));
+const USerModule = lazy(() => import('./UserModule/index'));
+const ColorWheel = lazy(() => import('./ColorWheel/index'));
+const ProductDesc = lazy(() => import('./PrductsDesc/index'));
+const Player = lazy(() => import('./AudioPlayer/index'));
+const ProductModel = lazy(() => import('./3DModels/index'));
+
 
 
 const App = () => {
@@ -156,25 +150,24 @@ const App = () => {
 
           <HeaderContainer>
             <ProductView products={ProductsLeft} />
-          
+
             <MidContainer>
+              <USerModule username='Anish Hassan' email='anish@gmail.com' imageUrl={user} />
               <ColorWheel />
             </MidContainer>
-          
-            <USerModule username='Anish Hassan' email='anish@gmail.com' imageUrl={user} />
-          
+
             <ProductView products={ProductsLeft} />
-          
+
           </HeaderContainer>
-          
+
           <ProductDesc />
 
-          <ActionContainer>
+          <ProductOptionsContainer>
             <Sizes onSizeSelected={onSizeSelected} />
             <Button color={selectedColor.hex}>
               <span>P</span><span>R</span><span>E</span><span>O</span><span>R</span><span>D</span><span>E</span><span>R</span> <span>N</span><span>O</span><span>W</span>
             </Button>
-          </ActionContainer>
+          </ProductOptionsContainer>
           <AudioContainer>
             <Player />
           </AudioContainer>
@@ -221,26 +214,39 @@ justify-content : space-between;
 `
 
 const MidContainer = styled.div`
-position :  absolute;
-left : 60rem;
-top:-14rem;
+
 `
 
 const ModelContainer = styled.div`
-display : flex;
-flex-direction : column;
-align-items : center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
  
   `
 const AudioContainer = styled.div`
-position : absolute;
+ position: fixed;
 bottom : 40px;
-left : 10px;
+left : 30px;
 width : 28rem;
 $rhap_theme-color: #fff !important; 
+@media (max-width: 1440px) {
+  bottom : 30px;
+left : 20px;
+width : 22rem;
 
+  }
 .rhap_container{
   background-color : transparent !important;
 }
 
+`
+
+const ProductOptionsContainer = styled.div`
+position: fixed;
+bottom : 40px;
+right : 60px;
+display : flex;
+flex-direction: column;
+align-items : center;
 `
