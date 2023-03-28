@@ -5,12 +5,13 @@ import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three'
 
 function Controls() {
-    const { gl: { domElement } } = useThree();
-    const width = 100;
-    const height = 100;
-    const camera = new THREE.PerspectiveCamera(60, width / height, 1, 1000);
-    return <OrbitControls args={[camera, domElement]} />
+  const { gl: { domElement } } = useThree();
+  const width = 100;
+  const height = 100;
+  const camera = new THREE.PerspectiveCamera(40, width / height, 1, 1000);
+  return <OrbitControls args={[camera, domElement]} />
 }
+
 
 const ProductModel = () => {
    
@@ -18,7 +19,7 @@ const ProductModel = () => {
     return (
         <>
             <Canvas
-                style={{ width: '60vw', height: '733px' }}
+                style={{ width: '60vw', height: '730px' }}
             >
                 <ambientLight />
                 <pointLight position={[2, 2, 1]} />
