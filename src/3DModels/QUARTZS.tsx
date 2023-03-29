@@ -56,6 +56,7 @@ export function Model(props: JSX.IntrinsicElements['group']) {
   }, [groupRef.current]);
   
 
+  const { nodes, materials } = useGLTF('/ShoeStore/Model/QUARTZ.glb') as GLTFResult
 
   useFrame(() => {
     if (groupRef.current) {
@@ -64,8 +65,7 @@ export function Model(props: JSX.IntrinsicElements['group']) {
     }
   });
 
-  const { nodes, materials } = useGLTF('/ShoeStore/Model/QUARTZ.glb') as GLTFResult
-
+ 
   return (
     <group ref={groupRef} {...props} >
       <group dispose={null} scale={23}  >
