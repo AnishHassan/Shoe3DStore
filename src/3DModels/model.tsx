@@ -6,22 +6,7 @@ import * as THREE from 'three';
 import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 
-function Controls() {
-    const { gl: { domElement } } = useThree();
-    const width = 100;
-    const height = 100;
-    const camera = new THREE.PerspectiveCamera(
-        75,
-        window.innerWidth / window.innerHeight,
-        0.1,
-        1000
-    );
-    const center = new THREE.Vector3();
 
-    camera.lookAt(center);
-
-    return <OrbitControls args={[camera, domElement]} />
-}
 
 const StyledCanvas = styled(Canvas)`
   width: 100%; /* Full width */
@@ -46,17 +31,16 @@ const ProductModel2 = () => {
             {isMediumScreen && <StyledCanvas style={{ height: '400px', width: 'auto' }}> <ambientLight />
                 <pointLight position={[2, 2, 1]} />
                 <pointLight position={[-3, -3, 2]} />
-                <Controls />
+                <OrbitControls makeDefault minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} />
                 <Model />
                 {/* <ContactShadows position={[0, -3, 0]} blur={2.5} scale={10} far={3} /> */}
             </StyledCanvas>}
             {isLargeScreen && <StyledCanvas style={{ height: '600px', width: '850px' }} shadows camera={{ position: [4, 0, -12], fov: 35 }}>
-                <Stage adjustCamera={1}>
+                <Stage adjustCamera={1.4}>
                     <ambientLight />
-
                     <Model />
                 </Stage>
-                <OrbitControls makeDefault minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} />
+                <OrbitControls makeDefault   />
                 {/* <ContactShadows position={[0, -3, 0]} blur={2.5} scale={10} far={3} /> */}
             </StyledCanvas>}
         </>
