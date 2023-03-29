@@ -40,7 +40,7 @@ const ProductModel2 = () => {
                     <Model />
                 </Stage>
                 <OrbitControls makeDefault minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} />
-                
+
                 {/* <ContactShadows position={[0, -3, 0]} blur={2.5} scale={10} far={3} /> */}
             </StyledCanvas>}
             {isMediumScreen && <StyledCanvas style={{ height: '400px', width: 'auto' }}> <ambientLight />
@@ -50,10 +50,10 @@ const ProductModel2 = () => {
                 <Model />
                 {/* <ContactShadows position={[0, -3, 0]} blur={2.5} scale={10} far={3} /> */}
             </StyledCanvas>}
-            {isLargeScreen && <StyledCanvas style={{ height: '600px', width: '800px' }} shadows camera={{ position: [4, 0, -12], fov: 35 }}>
+            {isLargeScreen && <StyledCanvas style={{ height: '600px', width: '850px' }} shadows camera={{ position: [4, 0, -12], fov: 35 }}>
                 <Stage adjustCamera={1}>
                     <ambientLight />
-                    
+
                     <Model />
                 </Stage>
                 <OrbitControls makeDefault minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} />
