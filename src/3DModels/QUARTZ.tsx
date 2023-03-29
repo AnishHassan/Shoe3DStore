@@ -41,7 +41,7 @@ type GLTFResult = GLTF & {
 
 export function Model(props: JSX.IntrinsicElements['group']) {
   const selectedColor = useSelector((state: RootState) => state.app.selectedColor);
-  const gltf = useLoader(GLTFLoader, '/Model/QUARTZ.glb');
+  const gltf = useLoader(GLTFLoader, '/Shoe3DStore/Model/QUARTZ.glb');
   const groupRef = useRef<THREE.Group>(null!);
   const [groupRotation, setGroupRotation] = useState(0);
 
@@ -65,7 +65,7 @@ export function Model(props: JSX.IntrinsicElements['group']) {
     }
   });
 
-  const { nodes, materials } = useGLTF('/Model/QUARTZ.glb') as GLTFResult
+  const { nodes, materials } = useGLTF('/Shoe3DStore/Model/QUARTZ.glb') as GLTFResult
 
   return (
     <group ref={groupRef} {...props} position={[0, 0, 0]}>
@@ -121,4 +121,4 @@ export function Model(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/Model/QUARTZ.glb')
+useGLTF.preload('/Shoe3DStore/Model/QUARTZ.glb')

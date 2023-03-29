@@ -56,7 +56,7 @@ export function Model(props: JSX.IntrinsicElements['group']) {
   }, [groupRef.current]);
 
 
-  const { nodes, materials } = useGLTF('/Model/QUARTZ.glb') as GLTFResult
+  const { nodes, materials } = useGLTF('/Shoe3DStore/Model/QUARTZ.glb') as GLTFResult
 
   useFrame(() => {
     if (groupRef.current) {
@@ -68,7 +68,7 @@ export function Model(props: JSX.IntrinsicElements['group']) {
 
   return (
     <group ref={groupRef} {...props} >
-      <group dispose={null} scale={10} >
+      <group dispose={null} scale={15} >
         <mesh geometry={nodes.SOLE_02.geometry} material={new THREE.MeshStandardMaterial({ color: selectedColor.hex })} position={[0.02, 0.01, -0.01]} rotation={[Math.PI, 0.46, 3.14]} scale={1.55} />
         <mesh geometry={nodes.PUFFER_EXTERNAL.geometry} material={materials['001']} position={[0.02, 0.01, -0.01]} rotation={[Math.PI, 0.46, 3.14]} scale={1.55} >
           <meshStandardMaterial color={selectedColor.hex} />
@@ -120,4 +120,4 @@ export function Model(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/Model/QUARTZ.glb')
+useGLTF.preload('/Shoe3DStore/Model/QUARTZ.glb')

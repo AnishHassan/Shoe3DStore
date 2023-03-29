@@ -36,11 +36,11 @@ const ProductModel2 = () => {
                 {/* <ContactShadows position={[0, -3, 0]} blur={2.5} scale={10} far={3} /> */}
             </StyledCanvas>}
             {isLargeScreen && <StyledCanvas style={{ height: '600px', width: '850px' }} shadows camera={{ position: [4, 0, -12], fov: 35 }}>
-                <Stage adjustCamera={1.4}>
+                <Stage adjustCamera={1.3}>
                     <ambientLight />
                     <Model />
                 </Stage>
-                <OrbitControls makeDefault   />
+                <OrbitControls makeDefault />
                 {/* <ContactShadows position={[0, -3, 0]} blur={2.5} scale={10} far={3} /> */}
             </StyledCanvas>}
         </>

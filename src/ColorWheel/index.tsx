@@ -79,7 +79,7 @@ const ColorWheel = () => {
 
     const selectColor = (id: number) => {
         const selectedColor = Colors.find((color) => color.id === id);
-        if (selectedColor && !selectedColors.includes(selectedColor)) {
+        if (selectedColor) {
             setSelectedColors([...selectedColors, selectedColor]);
             const index = Colors.findIndex((color) => color.id === id);
             // const colorAngle = angle + angleBetweenContainers * index;
