@@ -10,7 +10,12 @@ function Controls() {
     const { gl: { domElement } } = useThree();
     const width = 100;
     const height = 100;
-    const camera = new THREE.PerspectiveCamera(40, width / height, 1, 1000);
+    const camera = new THREE.PerspectiveCamera(
+        75,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        1000
+    );
     const center = new THREE.Vector3();
 
     camera.lookAt(center);

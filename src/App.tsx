@@ -11,6 +11,7 @@ import { RootState } from './store/store';
 import Sizes from './ShoeSizes';
 import Loader from './loader';
 import { lazy } from 'react';
+import ProductModel2 from './3DModels/model';
 
 
 const jump = keyframes`
@@ -175,7 +176,7 @@ const App = () => {
 
 
           <ModelContainer>
-            <ProductModel />
+            <ProductModel2 />
           </ModelContainer>
 
 
@@ -191,6 +192,9 @@ const App = () => {
           animated
         /> */}
 
+
+
+          {/* <ProductModel /> */}
         </MainContainer>
       }
     </>
