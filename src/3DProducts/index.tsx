@@ -16,6 +16,7 @@ export interface Product {
 // Define the props for the component
 interface Props {
     products: Product[];
+    right?:string;
 }
 
 // Define the styled components for the product buttons
@@ -44,11 +45,26 @@ const ProductPrice = styled.h4<{ isActive: boolean }>`
   font-size: 14px;
   }
 `;
+interface ProductContainerProps{
+    right:any;
+}
+const ProductContainer=styled.div<ProductContainerProps>`
+    
+position:absolute;
+display:flex;
+right:${({right})=>right?right:''};
+gap:0px;
+@media(max-width:1300px){
+    flex-direction:column;
+}
+@media(max-width:537px){
+    top:8rem;
+    right:${({right})=>right?'0px':''};
+}
+`
 
 
-
-
-const ProductView: React.FC<Props> = ({ products }) => {
+const ProductView: React.FC<Props> = ({ products,right }) => {
 
     const [selectedProduct, setSelectedProduct1] = useState<Product | null>(null);
     const dispatch = useDispatch();
@@ -60,9 +76,9 @@ const ProductView: React.FC<Props> = ({ products }) => {
 
     return (
         <>
-            <div className='products-pane'>
+            <ProductContainer right={right}>
                 {products.map((product) => (
-                    <div className='product-set'>
+                    <div >
                         <ProductButton
                             src={product.imageUrl}
                             key={product.id}
@@ -74,7 +90,7 @@ const ProductView: React.FC<Props> = ({ products }) => {
                         </ProductPrice>
                     </div>
                 ))}
-            </div>
+            </ProductContainer>
 
         </>
     );

@@ -21,6 +21,10 @@ const BackgroundContainer = styled.div<{ selectedColorhex: string, selectedColor
   right: 0;
   z-index: -1;
   overflow: hidden;
+  @media(max-width:768px){
+    width:100%;
+    height:100%;
+  }
 `;
 
 const RectangleOne = styled.div<{ selectedColorhex: string, selectedColorsec: string }>`
@@ -54,6 +58,10 @@ height: 25rem;
   background: linear-gradient(to top right, ${props => props.selectedColorhex}, ${props => props.selectedColorsec});
   border-radius: 630px 630px 0 0;
   margin: 0 auto;
+ 
+  @media(max-width:576px){
+    height: 38rem;
+  }
 `;
 
 

@@ -68,7 +68,7 @@ export function Model(props: JSX.IntrinsicElements['group']) {
 
   return (
     <group ref={groupRef} {...props} >
-      <group dispose={null} scale={15} >
+      <group dispose={null} scale={3} >
         <mesh geometry={nodes.SOLE_02.geometry} material={new THREE.MeshStandardMaterial({ color: selectedColor.hex })} position={[0.02, 0.01, -0.01]} rotation={[Math.PI, 0.46, 3.14]} scale={1.55} />
         <mesh geometry={nodes.PUFFER_EXTERNAL.geometry} material={materials['001']} position={[0.02, 0.01, -0.01]} rotation={[Math.PI, 0.46, 3.14]} scale={1.55} >
           <meshStandardMaterial color={selectedColor.hex} />

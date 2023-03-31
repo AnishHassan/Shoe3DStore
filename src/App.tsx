@@ -157,12 +157,10 @@ const App = () => {
               <ColorWheel />
             </MidContainer>
 
-            <ProductView products={ProductsLeft} />
+            <ProductView products={ProductsLeft} right="0px"/>
 
           </HeaderContainer>
-
           <ProductDesc />
-
           <ProductOptionsContainer>
             <Sizes onSizeSelected={onSizeSelected} />
             <Button color={selectedColor.hex}>
@@ -172,13 +170,11 @@ const App = () => {
           <AudioContainer>
             <Player />
           </AudioContainer>
-
-
-
           <ModelContainer>
             <ProductModel2 />
           </ModelContainer>
-
+         
+        
 
           {/* <ColorWheel2 size={200} /> */}
 
@@ -208,17 +204,26 @@ export default App;
 
 const MainContainer = styled.div`
 position : relative;
-`
 
+`
+const ThreeDContainer=styled.div`
+ width:100%;
+ background:orange;
+ position:relative;
+ margin-top:500px;
+`
 
 const HeaderContainer = styled.div`
 display : flex;
 justify-content : space-between;
+position:relative;
 
 `
 
 const MidContainer = styled.div`
-
+margin-left:auto;
+margin-right:auto;
+width:60px;
 `
 
 const ModelContainer = styled.div`
@@ -226,6 +231,12 @@ const ModelContainer = styled.div`
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  @media(max-width:1024px){
+    bottom:-13rem;
+  }
+  @media(max-width:700px){
+    bottom:17rem
+  }
  
   `
 const AudioContainer = styled.div`
@@ -240,6 +251,20 @@ left : 20px;
 width : 22rem;
 
   }
+  @media (max-width: 700px) {
+  bottom : 11rem;
+  margin-left:auto;
+margin-right:auto;
+
+width:80%;
+left:52px
+
+
+  }
+  @media(max-width:576px){
+    width : 17rem;
+    margin-left:15px
+  }
 .rhap_container{
   background-color : transparent !important;
 }
@@ -249,8 +274,15 @@ width : 22rem;
 const ProductOptionsContainer = styled.div`
 position: fixed;
 bottom : 40px;
-right : 60px;
+right : 10px;
 display : flex;
 flex-direction: column;
 align-items : center;
+@media(max-width:700px){
+  bottom : 0.5rem;
+margin-left:auto;
+margin-right:auto;
+
+width:100%
+}
 `

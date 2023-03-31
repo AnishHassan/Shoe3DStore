@@ -41,7 +41,10 @@ const ColorWheel = () => {
     }, []);
 
     useEffect(() => {
-        if (viewportWidth > 1440) {
+        if (viewportWidth > 1626) {
+            setRadius(400);
+        }
+        else if (viewportWidth > 1440) {
             setRadius(400);
         } else if (viewportWidth > 1300) {
             setRadius(370);
@@ -50,13 +53,14 @@ const ColorWheel = () => {
         } else if (viewportWidth > 900) {
             setRadius(310);
         } else if (viewportWidth > 800) {
-            setRadius(290);
-        } else if (viewportWidth > 650) {
-            setRadius(260);
-        } else if (viewportWidth > 560) {
-            setRadius(230);
+            setRadius(300);
+        }else if (viewportWidth > 700) {
+            setRadius(270);
+        } 
+           else if (viewportWidth > 566) {
+            setRadius(140);
         } else if (viewportWidth > 450) {
-            setRadius(200);
+            setRadius(175);
         }
     }, [viewportWidth]);
 
@@ -153,7 +157,7 @@ const ColorWheel = () => {
         </ColorContainer>
     );
 
-
+ 
     return (
         <>
             <WheelContainer id="wheel-container" >
@@ -186,6 +190,16 @@ const WheelContainer = styled.div`
   animation: rotate-wheel 0.5s ease-in-out;
   animation-fill-mode: forwards;
   margin-top : -300px;
+
+  @media(max-width:1100px){
+    margin-top:-200px
+  }
+  @media(max-width:800px){
+    margin-top:-100px
+  }
+  @media(max-width:576px){
+    margin-top:-120px
+  }
 `;
 
 
@@ -207,6 +221,16 @@ const ColorContainer = styled.div<{ hex: string; locked: boolean; angle: number 
   @media (max-width: 1629px) {
   width: 50px;
   height: 80px;
+
+  }
+  @media (max-width: 1100px) {
+  width: 40px;
+  height: 60px;
+
+  }
+  @media (max-width: 650px) {
+  width: 30px;
+  height: 40px;
 
   }
 `;
