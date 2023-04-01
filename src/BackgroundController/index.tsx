@@ -35,6 +35,20 @@ const RectangleOne = styled.div<{ selectedColorhex: string, selectedColorsec: st
 height: 28.125rem;
   background: linear-gradient(to top left, ${props => props.selectedColorhex}, ${props => props.selectedColorsec});
   border-radius: 0 0 580px 0;
+  @media(max-width:1000px){
+    width: 25rem;
+  }
+  @media(max-width:890px){
+    width: 20rem;
+  }
+  @media(max-width:690px){
+    width: 15rem;
+    height: 60vh;
+  }
+  @media(max-width:640px){
+    width: 10rem;
+   
+  }
   @media(max-width:576px){
     width:7.25rem;
     height:100vh;
@@ -53,6 +67,20 @@ const RectangleTwo = styled.div<{ selectedColorhex: string, selectedColorsec: st
 height: 28.125rem;
   background: linear-gradient(to top right, ${props => props.selectedColorhex}, ${props => props.selectedColorsec});
   border-radius: 0 0 0 580px;
+  @media(max-width:1000px){
+    width: 25rem;
+  }
+  @media(max-width:890px){
+    width: 20rem;
+  }
+   @media(max-width:690px){
+    width: 15rem;
+    height: 60vh;
+  }
+  @media(max-width:640px){
+    width: 10rem;
+    
+  }
   @media(max-width:576px){
     width:6.25rem;
     height:100vh;

@@ -8,40 +8,26 @@ margin-left : 6rem;
 margin-top : 10rem; 
 @media(max-width:1000px){
   margin-top:16rem;
+ margin-left:0rem;
+ text-align:center;
+ width:100%;
+ 
+}
+@media(max-width:800px){
+  
+  margin-top:19rem;
+ 
 }
 @media(max-width:576px){
-  width: 100%;
-    margin-left: 35px;
+  
     margin-top:11rem;
    
 }
-@media(max-width:510px){
-  
-    margin-left: 25px;
-   
-   
-}
-@media(max-width:470px){
-  
-  margin-left: 10px;
- 
- 
-}
-@media(max-width:440px){
-  
-  margin-left: 0px;
- 
- 
-}
-@media(max-width:425px){
-  margin-left:-26px;
-}
-@media(max-width:400px){
-  margin-left:-45px;
-}
-@media(max-width:370px){
-  margin-left:-43px;
-}
+
+
+
+
+
 `
 
 const ProductName = styled.div`
@@ -55,7 +41,7 @@ const ProductName = styled.div`
   }
   @media(max-width:576px){
     font-size:40px;
-    margin-left: 11rem;
+   
   }
   @media(max-width:425px){
     font-size:30px;
@@ -71,13 +57,10 @@ font-family: Arial, sans-serif;
   color: #FFFFFF;
   margin-top: 5px;
   margin-left: 8rem;
-   @media(max-width:931px){
+   @media(max-width:1000px){
     margin-left:0rem
   }
-   @media(max-width:576px){
-   
-    margin-left: 11rem;
-  }
+  
 `
 
 const ProductDesc = () => {
