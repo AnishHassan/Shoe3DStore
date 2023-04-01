@@ -43,6 +43,11 @@ const SizeButton = styled.button<SizeButtonProps>`
   color: ${({ color, selected }) => (selected ? color : "#000")};
   background-color:  #fff ;
   opacity: ${({ selected }) => (selected ? 0.9 : 0.2)};
+  @media(max-width:576px){
+    width:20px;
+    height:20px;
+    font-size:0.6rem
+  }
 `;
 
 const Sizes: React.FC<SizesProps> = ({ onSizeSelected }) => {

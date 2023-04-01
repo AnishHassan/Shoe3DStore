@@ -15,8 +15,29 @@ margin-top : 10rem;
     margin-top:11rem;
    
 }
+@media(max-width:510px){
+  
+    margin-left: 25px;
+   
+   
+}
+@media(max-width:470px){
+  
+  margin-left: 10px;
+ 
+ 
+}
+@media(max-width:440px){
+  
+  margin-left: 0px;
+ 
+ 
+}
 @media(max-width:425px){
   margin-left:-26px;
+}
+@media(max-width:400px){
+  margin-left:-45px;
 }
 @media(max-width:370px){
   margin-left:-43px;

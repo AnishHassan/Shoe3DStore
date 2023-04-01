@@ -31,6 +31,16 @@ const ProductButton = styled.img<{ isActive: boolean }>`
   height: 95px;
 
   }
+  @media (max-width: 576px) {
+  width: 80px;
+  height: 80px;
+
+  }
+  @media (max-width: 420px) {
+  width: 70px;
+  height: 70px;
+
+  }
 `;
 
 const ProductPrice = styled.h4<{ isActive: boolean }>`
@@ -41,8 +51,15 @@ const ProductPrice = styled.h4<{ isActive: boolean }>`
   font-weight: bold;
   margin-top : 4px;
   color : #fff;
+  margin-left:20px;
    @media (max-width: 1440px) {
   font-size: 14px;
+  }
+  @media(max-width:1330px){
+    margin-left:20px
+  }
+  @media(max-width:410px){
+    margin-left:10px
   }
 `;
 interface ProductContainerProps{

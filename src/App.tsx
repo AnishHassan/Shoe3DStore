@@ -167,9 +167,11 @@ const App = () => {
               <span>P</span><span>R</span><span>E</span><span>O</span><span>R</span><span>D</span><span>E</span><span>R</span> <span>N</span><span>O</span><span>W</span>
             </Button>
           </ProductOptionsContainer>
-          <AudioContainer>
+       
+        <AudioContainer>
             <Player />
           </AudioContainer>
+      
           <ModelContainer>
             <ProductModel2 />
           </ModelContainer>
@@ -231,12 +233,16 @@ const ModelContainer = styled.div`
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  @media(max-width:1024px){
-    bottom:-13rem;
+  @media(max-width:1023px){
+    bottom:15rem;
   }
-  @media(max-width:700px){
+  @media(max-width:767px){
+    bottom:17rem;
+  }
+  
+  /* @media(max-width:700px){
     bottom:17rem
-  }
+  } */
  
   `
 const AudioContainer = styled.div`
@@ -262,11 +268,42 @@ left:52px
 
   }
   @media(max-width:576px){
-    width : 17rem;
-    margin-left:15px
+    width : 13rem;
+    margin-left:18%;
+  }
+  @media(max-width:445px){
+   
+    margin-left:13%;
+  }
+  
+  @media(max-width:390px){
+   
+    margin-left:9%;
+  }
+  @media(max-width:360px){
+   
+    margin-left:8%;
   }
 .rhap_container{
   background-color : transparent !important;
+  @media(max-width:390px){
+    .rhap_repeat-button{
+      font-size:17px !important;
+      width:14px !important;
+    }
+    .rhap_main-controls-button{
+width:17px !important;
+font-size:20px !important;
+    }
+    .rhap_play-pause-button{
+      width:32px !important;
+font-size:31px !important;
+height:35px !important;
+    }
+    .rhap_volume-button{
+      font-size:21px !important
+    }
+  }
 }
 
 `
