@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkshoe_store=self.webpackChunkshoe_store||[]).push([[71],{1812:function(s,e,n){n.r(e);var t=n(6659),o=(n(7226),n(184));e.default=function(){return(0,o.jsx)(t.Z,{src:"https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/2.mp3",onPlay:function(s){return console.log("onPlay")}})}}}]);
+//# sourceMappingURL=71.d4415912.chunk.js.map
