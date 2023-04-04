@@ -12,6 +12,7 @@ import Sizes from './ShoeSizes';
 import Loader from './loader';
 import { lazy } from 'react';
 import ProductModel2 from './3DModels/model';
+import ColorWheel2 from './ColorWheel/index2';
 
 
 const jump = keyframes`
@@ -154,7 +155,7 @@ const App = () => {
 
             <MidContainer>
               <USerModule username='Anish Hassan' email='anish@gmail.com' imageUrl={user} />
-              <ColorWheel />
+              <WheelContainer><ColorWheel2 /></WheelContainer>   
             </MidContainer>
 
             <ProductView products={ProductsLeft} right="0px"/>
@@ -215,6 +216,11 @@ const ThreeDContainer=styled.div`
  margin-top:500px;
 `
 
+const WheelContainer = styled.div`
+margin-top : -80px;
+margin-left : -40px;
+`
+
 const HeaderContainer = styled.div`
 display : flex;
 justify-content : space-between;
@@ -240,9 +246,7 @@ const ModelContainer = styled.div`
     bottom:17rem;
   }
   
-  /* @media(max-width:700px){
-    bottom:17rem
-  } */
+
  
   `
 const AudioContainer = styled.div`

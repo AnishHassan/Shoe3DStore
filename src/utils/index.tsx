@@ -4,7 +4,7 @@ export type Color = {
     hex: string;
     sec: string;
     locked: boolean;
-    angle: number;
+    angle?: number;
 }
 
 

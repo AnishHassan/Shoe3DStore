@@ -15,7 +15,6 @@ const initialState: AppState = {
         hex: '#9c4037',
         sec: '#ff7c35',
         locked: false,
-        angle: 0
     },
     selectedProduct: {
         id: 1,

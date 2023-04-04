@@ -1,0 +1,176 @@
+   .main {
+      /* background-color: magenta; */
+      height: 20px;
+      width: 150px;
+    }
+    .root {
+      position: absolute;
+      margin-top: 110px;
+      margin-left: -10px;
+      height: 55px;
+      cursor: pointer;
+      
+    }
+
+    .content {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      height: 100%;
+      width: 20px;
+     
+    }
+
+    .content:before {
+      left: -10px;
+      transform: skew(-10deg);
+      
+    }
+
+    .content:after {
+      right: -10px;
+      transform: skew(10deg);
+      
+    }
+
+    .content:before, .content:after{
+      content: ' ';
+      display: block;
+      width: 20px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      border-radius: 5px;
+      z-index: -1;
+      
+    }
+
+     .color-0 .content:before, .color-0 .content:after, .color-0{
+      background-color: #9c4037;
+      
+    }
+     .color-11 .content:before, .color-11 .content:after, .color-11{
+      background-color: #da4900;
+    }
+     .color-12 .content:before, .color-12 .content:after, .color-12{
+      background-color: #462f99;
+    }
+     .color-13 .content:before, .color-13 .content:after, .color-13{
+      background-color: #829292;
+    }
+     .color-14 .content:before, .color-14 .content:after, .color-14{
+      background-color: #736d6f
+    }
+     .color-15 .content:before, .color-15 .content:after, .color-15{
+      background-color: #acd18e;
+    }
+     .color-16 .content:before, .color-16 .content:after, .color-16{
+      background-color: #937551;
+    }
+     .color-17 .content:before, .color-17 .content:after, .color-17{
+      background-color: #9c4037;
+    }
+     .color-18 .content:before, .color-18 .content:after, .color-18{
+      background-color: #da4900;
+    }
+     .color-1 .content:before, .color-1 .content:after, .color-1{
+      background-color: #462f99;
+    }
+     .color-21 .content:before, .color-21 .content:after, .color-21{
+      background-color: #829292;
+    }
+     .color-22 .content:before, .color-22 .content:after, .color-22{
+      background-color: #736d6f;
+    }
+     .color-23 .content:before, .color-23 .content:after, .color-23{
+      background-color: #acd18e;
+    }
+     .color-24 .content:before, .color-24 .content:after, .color-24{
+        background-color: #937551
+    }
+     .color-25 .content:before, .color-25 .content:after, .color-25{
+      background-color: #9c4037;
+    }
+     .color-26 .content:before, .color-26 .content:after, .color-26{
+      background-color: #da4900;
+    }
+     .color-27 .content:before, .color-27 .content:after, .color-27{
+      background-color: #462f99;
+    }
+     .color-28 .content:before, .color-28 .content:after, .color-28{
+      background-color: #829292;
+    }
+    
+    .color-0 {
+      transform: translate(0px);
+    }
+
+    .color-11 {
+      transform: rotate(-10deg) translate(44px) rotate(-10deg);
+    }
+
+    .color-12 {
+      transform: rotate(-20deg) translate(87px) rotate(-20deg);
+    }
+
+    .color-13 {
+      transform: rotate(-30deg) translate(128px) rotate(-30deg);
+    }
+
+    .color-14 {
+      transform: rotate(-40deg) translate(165px) rotate(-40deg);
+    }
+
+    .color-15 {
+      transform: rotate(-50deg) translate(196px) rotate(-50deg);
+    }
+
+    .color-16 {
+      transform: rotate(-60deg) translate(221px) rotate(-60deg);
+    }
+
+    .color-17 {
+      transform: rotate(-70deg) translate(240px) rotate(-70deg);
+    }
+
+    .color-18 {
+      transform: rotate(-80deg) translate(252px) rotate(-80deg);
+    }
+
+    .color-1 {
+      transform: rotate(-90deg) translate(255px) rotate(-90deg);
+    }
+
+    .color-21 {
+      transform: rotate(10deg) translate(-44px) rotate(10deg);
+    }
+
+    .color-22 {
+      transform: rotate(20deg) translate(-87px) rotate(20deg);
+    }
+
+    .color-23 {
+      transform: rotate(30deg) translate(-128px) rotate(30deg);
+    }
+
+    .color-24 {
+      transform: rotate(40deg) translate(-165px) rotate(40deg);
+    }
+
+    .color-25 {
+      transform: rotate(50deg) translate(-195px) rotate(50deg);
+    }
+
+    .color-26 {
+      transform: rotate(60deg) translate(-221px) rotate(60deg);
+    }
+
+    .color-27 {
+      transform: rotate(70deg) translate(-240px) rotate(70deg);
+    }
+
+    .color-28 {
+      transform: rotate(80deg) translate(-252px) rotate(80deg);
+    }
