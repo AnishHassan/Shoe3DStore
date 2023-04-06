@@ -30,7 +30,6 @@ const jump = keyframes`
 
 
 const Button = styled.button<{ color: String }>`
-font-size: 1rem;
 text-transform: uppercase;
 font-family: 'Russo One', sans-serif;
 text-align: center;

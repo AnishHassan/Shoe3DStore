@@ -21,29 +21,29 @@ const ProductModel2 = () => {
 
     return (
         <>
-            {isSmallScreen && <StyledCanvas style={{ height: '130px', width: '130px' }} shadows camera={{ position: [4, 0, -12], fov: 35 }}>  <ambientLight />
+            {isSmallScreen && <StyledCanvas style={{ height: '230px', width: '230px' }} shadows camera={{ position: [4, 0, -12], fov: 35 }}>  <ambientLight />
                 <Stage intensity={1.5} environment="city" shadows={{ type: 'accumulative', colorBlend: 2, opacity: 2 }} adjustCamera={0.9}>
                     <Model />
                 </Stage>
                 <OrbitControls makeDefault minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} />
 
-               
+
             </StyledCanvas>}
-            {isMediumScreen && <StyledCanvas style={{ height: '300px', width: '300px' }}   camera={{ position: [4, 0, -12], fov: 35 }}> <ambientLight />
-            <Stage adjustCamera={0.9}>
+            {isMediumScreen && <StyledCanvas style={{ height: '500px', width: '500px' }} camera={{ position: [4, 0, -12], fov: 35 }}> <ambientLight />
+                <Stage adjustCamera={0.9}>
                     <ambientLight />
                     <Model />
                 </Stage>
                 <OrbitControls makeDefault />
-             
+
             </StyledCanvas>}
-            {(isLargeScreen) && <StyledCanvas style={{ height: '500px', width: '500px' }} shadows camera={{ position: [4, 0, -12], fov: 35 }}>
+            {(isLargeScreen) && <StyledCanvas style={{ height: '700px', width: '700px' }} shadows camera={{ position: [4, 0, -12], fov: 35 }}>
                 <Stage adjustCamera={1.3}>
                     <ambientLight />
                     <Model />
                 </Stage>
                 <OrbitControls makeDefault />
-               
+
             </StyledCanvas>}
         </>
     );
