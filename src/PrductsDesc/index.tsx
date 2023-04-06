@@ -4,8 +4,8 @@ import { RootState } from "../store/store";
 
 const ProductContainer = styled.div`
 position : absolute;
-margin-left : 6rem;
-margin-top : 10rem; 
+margin-left : 10rem;
+margin-top : 21rem; 
 @media(max-width:1000px){
   margin-top:16rem;
  margin-left:0rem;

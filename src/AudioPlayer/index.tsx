@@ -19,6 +19,9 @@ const Player = () => (
         src='https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/2.mp3'
         onPlay={e => console.log("onPlay")}
         customIcons={customIcons}
+        showDownloadProgress={false}
+        showFilledProgress={false}
+       customProgressBarSection={[]}
     // other props here
     />
 );
