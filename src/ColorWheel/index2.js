@@ -79,9 +79,9 @@ const ColorWheel2 = () => {
           onClick={() =>
             handleColorChange({
               id: 1,
-              name: "Amazonite",
-              hex: "#9c4037",
-              sec: "#ff7c35",
+              name: "Slushy",
+              hex: "#8cc3ed",
+              sec: "#e5f3ff",
               locked: false,
             })
           }
@@ -93,9 +93,9 @@ const ColorWheel2 = () => {
           onClick={() =>
             handleColorChange({
               id: 2,
-              name: "Amber",
-              hex: "#da4900",
-              sec: "#ff7c35",
+              name: "Pollen",
+              hex: "#fcb745",
+              sec: "#ffee9d",
               locked: true,
             })
           }
@@ -121,7 +121,7 @@ const ColorWheel2 = () => {
           onClick={() =>
             handleColorChange({
               id: 4,
-              name: "Calcite",
+              name: "Angelite",
               hex: "#829292",
               sec: "#e8eeec",
               locked: false,
@@ -149,7 +149,7 @@ const ColorWheel2 = () => {
           onClick={() =>
             handleColorChange({
               id: 6,
-              name: "corundum",
+              name: "Clorophyll",
               hex: "#acd18e",
               sec: "#f8faec",
               locked: false,
@@ -163,9 +163,9 @@ const ColorWheel2 = () => {
           onClick={() =>
             handleColorChange({
               id: 7,
-              name: "Latte",
-              hex: "#937551",
-              sec: "#e5ddd0",
+              name: "Corundum",
+              hex: "#b563a1",
+              sec: "#eb99d7",
               locked: false,
             })
           }
@@ -177,9 +177,9 @@ const ColorWheel2 = () => {
           onClick={() =>
             handleColorChange({
               id: 8,
-              name: "Amazonite",
-              hex: "#9c4037",
-              sec: "#e0a18a",
+              name: "Latte",
+              hex: "#937551",
+              sec: "#e5ddd0",
               locked: false,
             })
           }
@@ -191,9 +191,9 @@ const ColorWheel2 = () => {
           onClick={() =>
             handleColorChange({
               id: 9,
-              name: "Amber",
-              hex: "#da4900",
-              sec: "#ff7c35",
+              name: "Lavander",
+              hex: "#cb98e5",
+              sec: "#e1dbf5",
               locked: true,
             })
           }
@@ -205,9 +205,9 @@ const ColorWheel2 = () => {
           onClick={() =>
             handleColorChange({
               id: 10,
-              name: "Amethyst",
-              hex: "#462f99",
-              sec: "#b1a8d7",
+              name: "Olivine",
+              hex: "#5e6038",
+              sec: "#e2eac3",
               locked: false,
             })
           }
@@ -219,9 +219,9 @@ const ColorWheel2 = () => {
           onClick={() =>
             handleColorChange({
               id: 11,
-              name: "Calcite",
-              hex: "#829292",
-              sec: "#e8eeec",
+              name: "Peach",
+              hex: "#9c4037",
+              sec: "#e0a18a",
               locked: false,
             })
           }
@@ -233,9 +233,9 @@ const ColorWheel2 = () => {
           onClick={() =>
             handleColorChange({
               id: 12,
-              name: "Clorophyll",
-              hex: "#736d6f",
-              sec: "#d4d9d3",
+              name: "Ruby",
+              hex: "#840d0f",
+              sec: "#4d080b",
               locked: false,
             })
           }
@@ -247,9 +247,9 @@ const ColorWheel2 = () => {
           onClick={() =>
             handleColorChange({
               id: 13,
-              name: "corundum",
-              hex: "#acd18e",
-              sec: "#f8faec",
+              name: "Saphyr",
+              hex: "#4458c6",
+              sec: "#95d6f6",
               locked: false,
             })
           }
@@ -261,9 +261,9 @@ const ColorWheel2 = () => {
           onClick={() =>
             handleColorChange({
               id: 14,
-              name: "Latte",
-              hex: "#937551",
-              sec: "#e5ddd0",
+              name: "Smoky",
+              hex: "#816a6e",
+              sec: "#d2cec5",
               locked: false,
             })
           }
@@ -275,9 +275,9 @@ const ColorWheel2 = () => {
           onClick={() =>
             handleColorChange({
               id: 15,
-              name: "Amazonite",
-              hex: "#9c4037",
-              sec: "#e0a18a",
+              name: "Titane",
+              hex: "#1f1f1f",
+              sec: "#464646",
               locked: false,
             })
           }
@@ -289,9 +289,9 @@ const ColorWheel2 = () => {
           onClick={() =>
             handleColorChange({
               id: 16,
-              name: "Amber",
-              hex: "#da4900",
-              sec: "#ff7c35",
+              name: "Agathe",
+              hex: "#222c8c",
+              sec: "#637bbb",
               locked: true,
             })
           }
@@ -303,9 +303,9 @@ const ColorWheel2 = () => {
           onClick={() =>
             handleColorChange({
               id: 17,
-              name: "Amethyst",
-              hex: "#462f99",
-              sec: "#b1a8d7",
+              name: "Antelope",
+              hex: "#d15b3a",
+              sec: "#f5ad83",
               locked: false,
             })
           }
@@ -317,9 +317,9 @@ const ColorWheel2 = () => {
           onClick={() =>
             handleColorChange({
               id: 18,
-              name: "Calcite",
-              hex: "#829292",
-              sec: "#e8eeec",
+              name: "Candy Cotton",
+              hex: "#f179bb",
+              sec: "#fed6e9",
               locked: false,
             })
           }

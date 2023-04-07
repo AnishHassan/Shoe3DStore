@@ -11,9 +11,9 @@ interface AppState {
 const initialState: AppState = {
     selectedColor: {
         id: 1,
-        name: 'Amazonite',
-        hex: '#9c4037',
-        sec: '#ff7c35',
+        name: "Slushy",
+        hex: "#8cc3ed",
+        sec: "#e5f3ff",
         locked: false,
     },
     selectedProduct: {
