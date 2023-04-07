@@ -15,8 +15,6 @@ type ColorDivProps = {
     index: number
 }
 
-
-
 const ColorWheel = () => {
     const [selectedColors, setSelectedColors] = useState<Color[]>([]);
     const dispatch = useDispatch();
@@ -24,7 +22,6 @@ const ColorWheel = () => {
     const [angles, setAngles] = useState<number[]>([]);
     const [radius, setRadius] = useState<number>(400);
     const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
-
     const angleBetweenContainers = 360 / Colors.length;
     const initialAngle = -90; // initial angle for the first container
 
@@ -32,9 +29,7 @@ const ColorWheel = () => {
         const handleResize = () => {
             setViewportWidth(window.innerWidth);
         };
-
         window.addEventListener('resize', handleResize);
-
         return () => {
             window.removeEventListener('resize', handleResize);
         };
@@ -63,7 +58,6 @@ const ColorWheel = () => {
             setRadius(175);
         }
     }, [viewportWidth]);
-
 
     useEffect(() => {
         const newAngles = Colors.map((_, index) => angle + angleBetweenContainers * index);
