@@ -19,7 +19,7 @@ const BackgroundContainer = styled.div<{ selectedColorhex: string, selectedColor
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: -1;
+  z-index: -2;
   overflow: hidden;
   @media(max-width:768px){
     width:100%;
@@ -33,6 +33,7 @@ const RectangleOne = styled.div<{ selectedColorhex: string, selectedColorsec: st
   top: 0;
   width: 36.25rem;
 height: 28.125rem;
+z-index: -2;
   background: linear-gradient(to top left, ${props => props.selectedColorhex}, ${props => props.selectedColorsec});
   border-radius: 0 0 580px 0;
   @media(max-width:1000px){
@@ -64,6 +65,7 @@ const RectangleTwo = styled.div<{ selectedColorhex: string, selectedColorsec: st
   right: 0;
   top: 0;
  width: 36.25rem;
+ z-index: -2;
 height: 28.125rem;
   background: linear-gradient(to top right, ${props => props.selectedColorhex}, ${props => props.selectedColorsec});
   border-radius: 0 0 0 580px;
@@ -98,7 +100,7 @@ const RectangleThree = styled.div<{ selectedColorhex: string, selectedColorsec: 
   transform: translateX(-50%);
   width: 39.375rem;
 height: 25rem;
-
+z-index: -2;
   background: linear-gradient(to top right, ${props => props.selectedColorhex}, ${props => props.selectedColorsec});
   border-radius: 630px 630px 0 0;
   margin: 0 auto;

@@ -2,6 +2,7 @@
   /* background-color: magenta; */
   height: 20px;
   width: 150px;
+  z-index : 3;
 }
 .root {
   position: absolute;

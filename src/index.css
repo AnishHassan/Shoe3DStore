@@ -39,3 +39,7 @@ code {
   width : 1.5rem;
 
 }
+.rhap_container {
+  background-color: transparent !important;
+  border: none !important;
+}

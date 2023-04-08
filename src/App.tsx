@@ -235,9 +235,9 @@ width:60px;
 
 const ModelContainer = styled.div`
   position: fixed;
-  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+   z-index : -1;
   @media(max-width:1023px){
     bottom:15rem;
   }
@@ -288,15 +288,16 @@ left:52px
     margin-left:8%;
   }
 .rhap_container{
-  background-color : transparent !important;
+  background-color: transparent !important;
+  border: none !important;
   @media(max-width:390px){
     .rhap_repeat-button{
       font-size:17px !important;
       width:14px !important;
     }
     .rhap_main-controls-button{
-width:17px !important;
-font-size:20px !important;
+   width:17px !important;
+f    ont-size:20px !important;
     }
     .rhap_play-pause-button{
       width:32px !important;

@@ -9,8 +9,6 @@ import { useMediaQuery } from 'react-responsive';
 
 
 const StyledCanvas = styled(Canvas)`
-  
- 
   overflow:visible !important;
 `;
 
@@ -19,28 +17,38 @@ const ProductModel2 = () => {
     const isMediumScreen = useMediaQuery({ minWidth: 768, maxWidth: 1023 }); // styles for screens between 768px and 1023px wide
     const isLargeScreen = useMediaQuery({ minWidth: 1024 }); // styles for screens wider than 1023px
 
+    const PivotPoint = () => {
+        const { viewport } = useThree();
+        return (
+            <group position={[0, -4, 0]}>
+                {/* This is the position of the pivot point relative to the model */}
+                <Model />
+            </group>
+        );
+    };
+
     return (
         <>
-            {isSmallScreen && <StyledCanvas style={{ height: '230px', width: '230px' }} shadows camera={{ position: [4, 0, -12], fov: 35 }}>  <ambientLight />
-                <Stage intensity={1.5} environment="city" shadows={{ type: 'accumulative', colorBlend: 2, opacity: 2 }} adjustCamera={0.9}>
+            {isSmallScreen && <StyledCanvas style={{ height: '100vh', width: '100vw' }} shadows={false} camera={{ position: [4, 0, -12], fov: 35 }}>  <ambientLight />
+                <Stage intensity={1.5} environment="city" adjustCamera={2} shadows={false}>
                     <Model />
                 </Stage>
                 <OrbitControls makeDefault minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} />
 
 
             </StyledCanvas>}
-            {isMediumScreen && <StyledCanvas style={{ height: '500px', width: '500px' }} camera={{ position: [4, 0, -12], fov: 35 }}> <ambientLight />
-                <Stage adjustCamera={0.9}>
+            {isMediumScreen && <StyledCanvas style={{ height: '100vh', width: '100vw' }} shadows={false} camera={{ position: [4, 0, -12], fov: 35 }}> <ambientLight />
+                <Stage adjustCamera={2.4} shadows={false}>
                     <ambientLight />
                     <Model />
                 </Stage>
                 <OrbitControls makeDefault />
 
             </StyledCanvas>}
-            {(isLargeScreen) && <StyledCanvas style={{ height: '700px', width: '700px' }} shadows camera={{ position: [4, 0, -12], fov: 35 }}>
-                <Stage adjustCamera={1.3}>
+            {(isLargeScreen) && <StyledCanvas style={{ height: '100vh', width: '100vw' }} shadows={false} camera={{ position: [4, 0, -12], fov: 35 }} draggable={false}>
+                <Stage adjustCamera={1.5} shadows={false} >
                     <ambientLight />
-                    <Model />
+                    <PivotPoint />
                 </Stage>
                 <OrbitControls makeDefault />
 
