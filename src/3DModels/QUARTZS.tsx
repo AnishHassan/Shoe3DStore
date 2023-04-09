@@ -46,21 +46,21 @@ export function Model(props: JSX.IntrinsicElements['group']) {
 
 
   console.log(selectedColor);
-  useEffect(() => {
-    if (groupRef.current) {
-      const center = new THREE.Vector3();
-      const box = new THREE.Box3().setFromObject(groupRef.current);
-      box.getCenter(center);
-      groupRef.current.position.sub(center);
-    }
-  }, [groupRef.current]);
+  // useEffect(() => {
+  //   if (groupRef.current) {
+  //     const center = new THREE.Vector3();
+  //     const box = new THREE.Box3().setFromObject(groupRef.current);
+  //     box.getCenter(center);
+  //     groupRef.current.position.sub(center);
+  //   }
+  // }, [groupRef.current]);
 
 
   const { nodes, materials } = useGLTF('/Shoe3DStore/Model/QUARTZ.glb') as GLTFResult
 
   useFrame(() => {
     if (groupRef.current) {
-      setGroupRotation(groupRotation + 0.005);
+      setGroupRotation(groupRotation + 0.001);
       groupRef.current.rotation.y = groupRotation;
     }
   });

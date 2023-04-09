@@ -154,10 +154,10 @@ const App = () => {
 
             <MidContainer>
               <USerModule username='Anish Hassan' email='anish@gmail.com' imageUrl={user} />
-              <WheelContainer><ColorWheel2 /></WheelContainer>   
+              <WheelContainer><ColorWheel2 /></WheelContainer>
             </MidContainer>
 
-            <ProductView products={ProductsLeft} right="0px"/>
+            <ProductView products={ProductsLeft} right="0px" />
 
           </HeaderContainer>
           <ProductDesc />
@@ -167,16 +167,16 @@ const App = () => {
               <span>P</span><span>R</span><span>E</span><span>O</span><span>R</span><span>D</span><span>E</span><span>R</span> <span>N</span><span>O</span><span>W</span>
             </Button>
           </ProductOptionsContainer>
-       
-        <AudioContainer>
+
+          <AudioContainer>
             <Player />
           </AudioContainer>
-      
+
           <ModelContainer>
             <ProductModel2 />
           </ModelContainer>
-         
-        
+
+
 
           {/* <ColorWheel2 size={200} /> */}
 
@@ -208,7 +208,7 @@ const MainContainer = styled.div`
 position : relative;
 
 `
-const ThreeDContainer=styled.div`
+const ThreeDContainer = styled.div`
  width:100%;
  background:orange;
  position:relative;
@@ -242,6 +242,10 @@ const ModelContainer = styled.div`
     bottom:15rem;
   }
   @media(max-width:767px){
+    bottom:17rem;
+  }
+
+  @media(max-width:874px){
     bottom:17rem;
   }
   
