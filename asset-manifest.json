@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Shoe3DStore/static/css/main.6b58f5b2.css",
-    "main.js": "/Shoe3DStore/static/js/main.39612bc0.js",
+    "main.js": "/Shoe3DStore/static/js/main.75b890ce.js",
     "static/js/272.3e2094ae.chunk.js": "/Shoe3DStore/static/js/272.3e2094ae.chunk.js",
     "static/js/184.3a547a20.chunk.js": "/Shoe3DStore/static/js/184.3a547a20.chunk.js",
     "static/css/394.c0691783.chunk.css": "/Shoe3DStore/static/css/394.c0691783.chunk.css",
@@ -30,7 +30,7 @@
     "static/media/m2.png": "/Shoe3DStore/static/media/m2.7b0423e0b05dd2f7f59a.png",
     "index.html": "/Shoe3DStore/index.html",
     "main.6b58f5b2.css.map": "/Shoe3DStore/static/css/main.6b58f5b2.css.map",
-    "main.39612bc0.js.map": "/Shoe3DStore/static/js/main.39612bc0.js.map",
+    "main.75b890ce.js.map": "/Shoe3DStore/static/js/main.75b890ce.js.map",
     "272.3e2094ae.chunk.js.map": "/Shoe3DStore/static/js/272.3e2094ae.chunk.js.map",
     "184.3a547a20.chunk.js.map": "/Shoe3DStore/static/js/184.3a547a20.chunk.js.map",
     "394.c0691783.chunk.css.map": "/Shoe3DStore/static/css/394.c0691783.chunk.css.map",
@@ -48,6 +48,6 @@
   },
   "entrypoints": [
     "static/css/main.6b58f5b2.css",
-    "static/js/main.39612bc0.js"
+    "static/js/main.75b890ce.js"
   ]
 }
